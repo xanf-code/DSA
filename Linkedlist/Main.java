@@ -10,5 +10,9 @@ public class Main {
         linky.insert(9);
 
         linky.show();
+
+        linky.delete(2);
+
+        linky.show();
     }
 }

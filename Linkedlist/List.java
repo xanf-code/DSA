@@ -3,6 +3,7 @@ package Linkedlist;
 public class List {
     Node head;
     Node temp;
+    Node nextNode;
 
     void insert(int data) {
 
@@ -20,8 +21,17 @@ public class List {
 
     };
 
-    void delete(int index) {
-        // Delete Tomorrow
+    void delete(int pos) {
+        temp = head;
+        int i = 1;
+        // IMPORTANT:
+        while (i < pos - 1) {
+            temp = temp.next;
+            i++;
+        }
+        nextNode = temp.next;
+        temp.next = nextNode.next;
+        nextNode.next = null;
     };
 
     void show() {
